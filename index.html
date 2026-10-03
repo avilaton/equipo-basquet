@@ -20,68 +20,16 @@
   </header>
 
   <main class="container">
-    <section class="roster" aria-label="Plantel del equipo">
-      <!-- Jugador 1 -->
-      <article class="card">
-        <div class="card__photo">
-          <img src="img/jugador-1.svg" alt="Foto de ejemplo de Mateo Gómez" />
-          <span class="card__number" aria-label="Número de camiseta">#4</span>
-        </div>
-        <div class="card__body">
-          <h2 class="card__name">Mateo Gómez</h2>
-          <p class="card__position">Base</p>
-          <dl class="card__data">
-            <div><dt>Edad</dt><dd>10 años</dd></div>
-            <div><dt>Altura</dt><dd>1,42 m</dd></div>
-            <div><dt>Mano hábil</dt><dd>Derecha</dd></div>
-            <div><dt>Ingreso</dt><dd>2024</dd></div>
-          </dl>
-          <p class="card__bio">Rápido en el contraataque y buen manejo de pelota. Le encanta asistir a sus compañeros.</p>
-        </div>
-      </article>
-
-      <!-- Jugador 2 -->
-      <article class="card">
-        <div class="card__photo">
-          <img src="img/jugador-2.svg" alt="Foto de ejemplo de Donato Ávila" />
-          <span class="card__number" aria-label="Número de camiseta">#7</span>
-        </div>
-        <div class="card__body">
-          <h2 class="card__name">Donato Ávila</h2>
-          <p class="card__position">Alero</p>
-          <dl class="card__data">
-            <div><dt>Edad</dt><dd>9 años</dd></div>
-            <div><dt>Altura</dt><dd>1,38 m</dd></div>
-            <div><dt>Mano hábil</dt><dd>Izquierda</dd></div>
-            <div><dt>Ingreso</dt><dd>2024</dd></div>
-          </dl>
-          <p class="card__bio">Gran energía en defensa y siempre con una sonrisa. Trabaja mucho el tiro de media distancia.</p>
-        </div>
-      </article>
-
-      <!-- Jugador 3 -->
-      <article class="card">
-        <div class="card__photo">
-          <img src="img/jugador-3.svg" alt="Foto de ejemplo de Tomás Pérez" />
-          <span class="card__number" aria-label="Número de camiseta">#11</span>
-        </div>
-        <div class="card__body">
-          <h2 class="card__name">Tomás Pérez</h2>
-          <p class="card__position">Pivote</p>
-          <dl class="card__data">
-            <div><dt>Edad</dt><dd>11 años</dd></div>
-            <div><dt>Altura</dt><dd>1,50 m</dd></div>
-            <div><dt>Mano hábil</dt><dd>Derecha</dd></div>
-            <div><dt>Ingreso</dt><dd>2023</dd></div>
-          </dl>
-          <p class="card__bio">El más alto del equipo, domina el rebote y protege el aro con mucha actitud.</p>
-        </div>
-      </article>
+    <section class="roster" id="roster" aria-label="Plantel del equipo">
+      <!-- Las tarjetas se generan automáticamente desde players.js -->
     </section>
   </main>
 
   <footer class="footer">
     <p>Club Universitario · Minibásquet · Categoría Mini · Equipo de Donato · Página de ejemplo</p>
   </footer>
+
+  <script src="players.js"></script>
+  <script src="render.js"></script>
 </body>
 </html>
