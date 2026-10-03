@@ -1,6 +1,6 @@
-# Club Universitario · Básquet Infantil · Donato
+# Club Universitario · Minibásquet · Categoría Mini · Donato
 
-Página estática con el plantel del equipo de básquet infantil del **Club Universitario** (equipo de Donato): nombres, fotos y datos de cada jugador. Colores del club: **rojo y blanco**.
+Página estática con el plantel de **minibásquet (categoría Mini)** del **Club Universitario** (equipo de Donato): nombres, fotos y datos de cada jugador. Colores del club: **rojo y blanco**.
 
 > ⚠ **Datos e imágenes de ejemplo.** Reemplazá luego los nombres, datos y fotos por los reales.
 

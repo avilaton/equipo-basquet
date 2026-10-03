@@ -65,6 +65,19 @@ body {
   color: #ffe9ec;
 }
 
+.hero__category {
+  display: inline-block;
+  background: #fff;
+  color: var(--red-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  margin: 0 0 1rem;
+}
+
 .hero__note {
   display: inline-block;
   background: #ffffff;
