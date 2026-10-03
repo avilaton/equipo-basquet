@@ -1,8 +1,10 @@
-# Equipo de Básquet Infantil · Donato
+# Club Universitario · Básquet Infantil · Donato
 
-Página estática con el plantel del equipo de básquet infantil de Donato: nombres, fotos y datos de cada jugador.
+Página estática con el plantel del equipo de básquet infantil del **Club Universitario** (equipo de Donato): nombres, fotos y datos de cada jugador. Colores del club: **rojo y blanco**.
 
 > ⚠ **Datos e imágenes de ejemplo.** Reemplazá luego los nombres, datos y fotos por los reales.
+
+El escudo del encabezado es el del Club Universitario de Córdoba ([Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Universitario_cba_logo.svg)).
 
 ## Ver la página
 
@@ -20,6 +22,6 @@ Publicada con GitHub Pages. También podés abrir `index.html` directamente en e
 ```
 equipo-basquet/
 ├── index.html      # Página principal con las tarjetas de los jugadores
-├── styles.css      # Estilos (paleta azul/naranja, apta para daltonismo)
-└── img/            # Fotos de los jugadores (ejemplos en SVG)
+├── styles.css      # Estilos (paleta rojo/blanco del club)
+└── img/            # Logo del club y fotos de los jugadores (ejemplos en SVG)
 ```
