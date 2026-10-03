@@ -38,6 +38,11 @@ Toda la información de los jugadores está en un solo archivo fácil de editar:
 
 Las tarjetas se dibujan solas a partir de ese archivo.
 
+> 💡 **Si editaste y no ves el cambio enseguida:** es la caché del navegador.
+> GitHub Pages guarda los archivos ~10 minutos. Hacé una recarga forzada
+> (`Cmd/Ctrl + Shift + R`), abrilo en una ventana de incógnito, o esperá unos
+> minutos. El cambio ya está publicado igual.
+
 ## Cómo reemplazar las fotos
 
 1. Colocá las imágenes reales en la carpeta [`img/`](img/) (`.jpg`, `.png` o `.svg`).
