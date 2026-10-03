@@ -24,4 +24,4 @@
    players.js como respaldo.
    ============================================================ */
 
-const SHEET_CSV_URL = "";
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1HPkB6CHv98KzRyYuNGny5P1EPn4ZUhpqrjlw3R2TH6k/gviz/tq?tqx=out:csv";

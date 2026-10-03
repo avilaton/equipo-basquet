@@ -39,7 +39,8 @@
     return `
       <article class="card">
         <div class="card__photo">
-          <img src="${foto}" alt="Foto de ${escapar(j.nombre)}" loading="lazy" />
+          <img src="${foto}" alt="Foto de ${escapar(j.nombre)}" loading="lazy"
+               onerror="this.onerror=null;this.src='img/placeholder.svg';" />
           ${numero}
         </div>
         <div class="card__body">
