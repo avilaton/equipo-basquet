@@ -12,10 +12,35 @@ Publicada con GitHub Pages. También podés abrir `index.html` directamente en e
 
 ## Cómo cargar / editar los jugadores
 
-Toda la información de los jugadores está en un solo archivo fácil de editar:
-**[`players.js`](players.js)**. No hace falta tocar el HTML.
+Hay dos formas de cargar los datos. La página usa la **Google Sheet** si está
+configurada; si no, usa el archivo `players.js` como respaldo.
 
-1. Abrí [`players.js`](players.js). Vas a ver un bloque por jugador:
+### Opción A — Google Sheet (recomendada, editás desde el celu)
+
+1. Creá una planilla en Google Sheets con estas columnas en la **primera fila**
+   (el orden no importa, los nombres sí):
+
+   | nombre | numero | posicion | edad | altura | mano | ingreso | foto | bio |
+   |--------|--------|----------|------|--------|------|---------|------|-----|
+
+   - Una fila por jugador.
+   - `foto`: nombre del archivo en `img/` (ej: `img/donato.jpg`) o un link
+     público a una imagen. Si lo dejás vacío, se muestra una silueta gris.
+
+2. En la planilla: **Archivo → Compartir → Publicar en la web →** elegí la hoja
+   y el formato **CSV → Publicar**. Copiá el link.
+3. Pegá ese link en [`config.js`](config.js), entre las comillas de
+   `const SHEET_CSV_URL = "";`.
+4. Listo: la página baja los datos de la planilla al abrirse. Para cambiar datos,
+   editás la planilla (Google tarda ~5 min en reflejarlo).
+
+> 🔒 **Privacidad:** "Publicar en la web" hace ese CSV visible para cualquiera
+> con el link. Son datos de menores, así que compartí solo lo necesario.
+
+### Opción B — archivo players.js (sin planilla)
+
+Dejá `SHEET_CSV_URL` vacío en [`config.js`](config.js) y editá
+[`players.js`](players.js). Vas a ver un bloque por jugador:
 
    ```js
    {
@@ -31,12 +56,12 @@ Toda la información de los jugadores está en un solo archivo fácil de editar:
    },
    ```
 
-2. **Editar un jugador:** cambiá el texto entre comillas de cada campo.
-3. **Agregar un jugador:** copiá un bloque `{ ... }` completo (incluida la coma final) y pegalo dentro de los corchetes `[ ]`.
-4. **Quitar un jugador:** borrá su bloque `{ ... }`.
-5. **Campo vacío:** si no querés mostrar un dato, dejalo con comillas vacías `""` y no aparecerá.
-
-Las tarjetas se dibujan solas a partir de ese archivo.
+- **Editar:** cambiá el texto entre comillas. Escribí cada valor en **una sola
+  línea** (si no, rompe el archivo).
+- **Agregar jugador:** copiá un bloque `{ ... }` completo (con la coma) y pegalo
+  dentro de los corchetes `[ ]`.
+- **Quitar jugador:** borrá su bloque `{ ... }`.
+- **Campo vacío:** dejalo con comillas vacías `""` y no aparecerá.
 
 > 💡 **Si editaste y no ves el cambio enseguida:** es la caché del navegador.
 > GitHub Pages guarda los archivos ~10 minutos. Hacé una recarga forzada
@@ -53,8 +78,9 @@ Las tarjetas se dibujan solas a partir de ese archivo.
 ```
 equipo-basquet/
 ├── index.html      # Estructura de la página (no hace falta editarlo)
-├── players.js      # 👉 DATOS DE LOS JUGADORES (editá este archivo)
-├── render.js       # Dibuja las tarjetas desde players.js
+├── config.js       # 👉 Link de la Google Sheet (opción A)
+├── players.js      # 👉 Datos de respaldo si no usás planilla (opción B)
+├── render.js       # Baja los datos (planilla o players.js) y dibuja las tarjetas
 ├── styles.css      # Estilos (paleta rojo/blanco del club)
-└── img/            # Logo del club y fotos de los jugadores (ejemplos en SVG)
+└── img/            # Logo del club y fotos de los jugadores
 ```

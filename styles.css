@@ -189,6 +189,14 @@ body {
   font-size: 0.95rem;
 }
 
+.roster__msg {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.05rem;
+  padding: 2rem 0;
+}
+
 /* Footer */
 .footer {
   text-align: center;
