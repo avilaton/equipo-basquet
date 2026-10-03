@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-label="Foto de ejemplo del jugador 3">
+  <rect width="400" height="400" fill="#009E73"/>
+  <circle cx="200" cy="150" r="70" fill="#66C2A5"/>
+  <path d="M80 360c0-66 54-110 120-110s120 44 120 110z" fill="#66C2A5"/>
+  <text x="200" y="388" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle">Foto de ejemplo</text>
+</svg>
