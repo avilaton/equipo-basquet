@@ -13,15 +13,16 @@
 
 const JUGADORES = [
   {
-    nombre: "Mateo Gómez",
-    numero: "4",
+    nombre: "Joaquín",
+    numero: "8",
     posicion: "Base",
-    edad: "10 años",
+    edad: "11 años",
     altura: "1,42 m",
     mano: "Derecha",
     ingreso: "2024",
     foto: "img/jugador-1.svg",
-    bio: "Rápido en el contraataque y buen manejo de pelota. Le encanta asistir a sus compañeros.",
+    bio: "Es muy bueno siempre piensa en sus compañeros y tiene un buen tiro
+      .",
   },
   {
     nombre: "Donato Ávila",
