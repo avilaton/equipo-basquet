@@ -21,8 +21,7 @@ const JUGADORES = [
     mano: "Derecha",
     ingreso: "2024",
     foto: "img/jugador-1.svg",
-    bio: "Es muy bueno siempre piensa en sus compañeros y tiene un buen tiro
-      .",
+    bio: "Es muy bueno, siempre piensa en sus compañeros y tiene un buen tiro.",
   },
   {
     nombre: "Donato Ávila",
