@@ -1,6 +1,12 @@
-# Club Universitario · Minibásquet · Categoría Mini · Donato
+# Basket Universitario Mini
 
-Página estática con el plantel de **minibásquet (categoría Mini)** del **Club Universitario** (equipo de Donato): nombres, fotos y datos de cada jugador. Colores del club: **rojo y blanco**.
+Página estática del equipo de **minibásquet (categoría Mini)** del **Club Universitario de Córdoba**, con tres pestañas:
+
+- **Plantel:** tarjetas con foto, número, posición, altura y edad; regla de alturas. Al tocar un jugador se abre su ficha con un jugadorcito animado (tocándolo protege la pelota, tira al aro o hace una bandeja).
+- **Partidos:** próximo partido, fixture y resultados (`partidos.js`).
+- **Asistencia:** porcentaje de cada jugador en entrenamientos y partidos (`asistencia.js` y `partidos.js`).
+
+Colores del club: **rojo y blanco**.
 
 > ⚠ **Datos e imágenes de ejemplo.** Reemplazá luego los nombres, datos y fotos por los reales.
 
@@ -68,6 +74,13 @@ Dejá `SHEET_CSV_URL` vacío en [`config.js`](config.js) y editá
 > (`Cmd/Ctrl + Shift + R`), abrilo en una ventana de incógnito, o esperá unos
 > minutos. El cambio ya está publicado igual.
 
+## Cómo cargar partidos y asistencia
+
+- **Partidos:** editá [`partidos.js`](partidos.js). Hay un bloque de ejemplo comentado: copialo, sacale las `//` y completalo. Los tantos (`nuestros`, `suyos`) quedan vacíos hasta que se juegue; en `jugaron` van los números de camiseta separados por coma.
+- **Entrenamientos:** editá [`asistencia.js`](asistencia.js), un renglón por entrenamiento con la fecha y los números de camiseta de los presentes.
+
+La asistencia se cuenta por número de camiseta, así que cada jugador tiene que tener su número cargado.
+
 ## Cómo reemplazar las fotos
 
 1. Colocá las imágenes reales en la carpeta [`img/`](img/) (`.jpg`, `.png` o `.svg`).
@@ -80,7 +93,9 @@ equipo-basquet/
 ├── index.html      # Estructura de la página (no hace falta editarlo)
 ├── config.js       # 👉 Link de la Google Sheet (opción A)
 ├── players.js      # 👉 Datos de respaldo si no usás planilla (opción B)
-├── render.js       # Baja los datos (planilla o players.js) y dibuja las tarjetas
+├── partidos.js     # 👉 Fixture, resultados y quiénes jugaron
+├── asistencia.js   # 👉 Asistencia a entrenamientos
+├── render.js       # Baja los datos y dibuja la página
 ├── styles.css      # Estilos (paleta rojo/blanco del club)
 └── img/            # Logo del club y fotos de los jugadores
 ```

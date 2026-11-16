@@ -2,35 +2,100 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Club Universitario · Minibásquet · Categoría Mini · Donato</title>
-  <meta name="description" content="Plantel de minibásquet (categoría Mini) del Club Universitario (equipo de Donato): jugadores, fotos y datos." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Basket Universitario Mini</title>
+  <meta name="description" content="Plantel de minibásquet (categoría Mini) del Club Universitario de Córdoba: jugadores, partidos y asistencia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
-  <header class="hero">
-    <div class="hero__content">
-      <img class="hero__logo" src="img/club-universitario-logo.svg" alt="Escudo del Club Universitario de Córdoba" />
-      <p class="hero__eyebrow">Club Universitario · Minibásquet</p>
-      <h1 class="hero__title">Equipo de Donato</h1>
-      <p class="hero__subtitle">Conocé al plantel: nombres, fotos y datos de cada jugador.</p>
-      <p class="hero__category">Categoría Mini</p>
-      <p class="hero__note">⚠ Datos e imágenes de ejemplo — se reemplazarán por los reales.</p>
+  <header class="band gutter">
+    <div class="inner">
+      <img class="crest" src="img/club-universitario-logo.svg" alt="Escudo del Club Universitario de Córdoba" />
+      <div class="titles">
+        <div class="kicker">Minibásquet · Categoría Mini · Temporada <span id="season"></span></div>
+        <h1 class="team-name">Basket Universitario Mini</h1>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="roster" id="roster" aria-label="Plantel del equipo">
-      <!-- Las tarjetas se generan automáticamente desde players.js -->
+  <nav class="tabs gutter" aria-label="Secciones">
+    <div class="inner">
+      <a href="#plantel" data-view="plantel">Plantel</a>
+      <a href="#partidos" data-view="partidos">Partidos</a>
+      <a href="#asistencia" data-view="asistencia">Asistencia</a>
+    </div>
+  </nav>
+
+  <main class="inner gutter">
+    <section id="v-plantel">
+      <div class="stats" aria-label="Resumen del plantel">
+        <div class="stat"><span class="label">Jugadores</span><b id="sCount">–</b><small>en el plantel</small></div>
+        <div class="stat"><span class="label">Altura promedio</span><b id="sAvg">–</b><small>del equipo</small></div>
+        <div class="stat"><span class="label">Más alto</span><b id="sMax">–</b><small id="sMaxName">&nbsp;</small></div>
+        <div class="stat"><span class="label">Edad promedio</span><b id="sAge">–</b><small>años</small></div>
+      </div>
+      <div class="toolbar">
+        <div class="chips" id="chips" role="group" aria-label="Filtrar por posición"></div>
+        <label class="label sort-label">Ordenar
+          <select class="sort" id="sort">
+            <option value="number">Número</option>
+            <option value="height">Altura</option>
+            <option value="name">Nombre</option>
+          </select>
+        </label>
+      </div>
+      <div class="grid" id="grid"><p class="status">Cargando jugadores…</p></div>
+      <div class="panel" id="rulerSec" hidden>
+        <div class="panel-head"><h2>Regla de alturas</h2><span class="label">En centímetros · aro de mini a 260 cm</span></div>
+        <div class="bars" id="bars"></div>
+      </div>
+    </section>
+
+    <section id="v-partidos" hidden>
+      <div class="stats" aria-label="Resumen de partidos">
+        <div class="stat"><span class="label">Jugados</span><b id="mPlayed">0</b><small>con resultado</small></div>
+        <div class="stat"><span class="label">Ganados</span><b id="mWon">0</b><small id="mPerc">&nbsp;</small></div>
+        <div class="stat"><span class="label">Perdidos</span><b id="mLost">0</b><small id="mTied">&nbsp;</small></div>
+        <div class="stat"><span class="label">Tantos</span><b id="mPts">–</b><small>a favor – en contra</small></div>
+      </div>
+      <span class="label">Próximo partido</span>
+      <div id="nextMatch"></div>
+      <div class="panel">
+        <div class="panel-head"><h2>Fixture</h2><span class="label" id="fixtureCount"></span></div>
+        <div class="list" id="upcoming"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h2>Resultados</h2></div>
+        <div class="list" id="results"></div>
+      </div>
+    </section>
+
+    <section id="v-asistencia" hidden>
+      <div class="stats" aria-label="Resumen de asistencia">
+        <div class="stat"><span class="label">Entrenamientos</span><b id="aPractices">0</b><small>registrados</small></div>
+        <div class="stat"><span class="label">Partidos</span><b id="aMatches">0</b><small>con asistencia</small></div>
+        <div class="stat"><span class="label">Asistencia media</span><b id="aAvg">–</b><small>del plantel</small></div>
+        <div class="stat"><span class="label">Último</span><b id="aLast">–</b><small id="aLastSub">&nbsp;</small></div>
+      </div>
+      <div class="panel"><div class="att-table" id="attTable"></div></div>
+      <div class="panel">
+        <div class="panel-head"><h2>Entrenamientos</h2></div>
+        <div class="list" id="practiceList"></div>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>Club Universitario · Minibásquet · Categoría Mini · Equipo de Donato · Página de ejemplo</p>
-  </footer>
+  <footer class="footer gutter"><div class="inner">Club Universitario de Córdoba · Minibásquet · Categoría Mini</div></footer>
 
-  <script src="players.js?v=3"></script>
-  <script src="config.js?v=3"></script>
-  <script src="render.js?v=3"></script>
+  <dialog id="viewDlg"></dialog>
+
+  <script src="players.js?v=4"></script>
+  <script src="partidos.js?v=4"></script>
+  <script src="asistencia.js?v=4"></script>
+  <script src="config.js?v=4"></script>
+  <script src="render.js?v=4"></script>
 </body>
 </html>
